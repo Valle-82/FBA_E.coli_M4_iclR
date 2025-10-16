@@ -284,27 +284,27 @@ Do the same thing for the second strain
 
 # insert the specific rates
 error_factor = 0  # choose value from 0 to 1
-multipling_factor = 60/(3 * 2.363)
+multipling_factor = 60/(3 * 3.285)
 
 
 # production fluxes
 
-M4iclr_pck.reactions.EX_ac_e.lower_bound = 0.1406 * (1 - error_factor) * multipling_factor
-M4iclr_pck.reactions.EX_ac_e.upper_bound = 0.1406 * (1 + error_factor) * multipling_factor
+M4iclr_pck.reactions.EX_ac_e.lower_bound = 1.049 * (1 - error_factor) * multipling_factor
+M4iclr_pck.reactions.EX_ac_e.upper_bound = 1.049 * (1 + error_factor) * multipling_factor
 
-M4iclr_pck.reactions.BIOMASS_Ecoli_core_w_GAM.lower_bound = 0.0500 * (1 - error_factor) * multipling_factor
-M4iclr_pck.reactions.BIOMASS_Ecoli_core_w_GAM.upper_bound = 0.0500 * (1 + error_factor) * multipling_factor
+M4iclr_pck.reactions.BIOMASS_Ecoli_core_w_GAM.lower_bound = 0.043 * (1 - error_factor) * multipling_factor
+M4iclr_pck.reactions.BIOMASS_Ecoli_core_w_GAM.upper_bound = 0.043 * (1 + error_factor) * multipling_factor
 
-M4iclr_pck.reactions.EX_succ_e.lower_bound = 0.0668 * (1 - error_factor) * multipling_factor
-M4iclr_pck.reactions.EX_succ_e.upper_bound = 0.0668 * (1 + error_factor) * multipling_factor
+M4iclr_pck.reactions.EX_succ_e.lower_bound = 0.351 * (1 - error_factor) * multipling_factor
+M4iclr_pck.reactions.EX_succ_e.upper_bound = 0.351 * (1 + error_factor) * multipling_factor
 
-M4iclr_pck.reactions.EX_mal__L_e.lower_bound = 0.9037 * (1 - error_factor) * multipling_factor
-M4iclr_pck.reactions.EX_mal__L_e.upper_bound = 0.9037 * (1 + error_factor) * multipling_factor
+M4iclr_pck.reactions.EX_mal__L_e.lower_bound = 0.895 * (1 - error_factor) * multipling_factor
+M4iclr_pck.reactions.EX_mal__L_e.upper_bound = 0.895 * (1 + error_factor) * multipling_factor
 
 # consumption fluxes
 
-M4iclr_pck.reactions.EX_glyc_e.lower_bound = -2.363 * (1 + error_factor) * multipling_factor
-M4iclr_pck.reactions.EX_glyc_e.upper_bound = -2.363 * (1 - error_factor) * multipling_factor
+M4iclr_pck.reactions.EX_glyc_e.lower_bound = -3.285 * (1 + error_factor) * multipling_factor
+M4iclr_pck.reactions.EX_glyc_e.upper_bound = -3.285 * (1 - error_factor) * multipling_factor
 
 M4iclr_pck.objective = {model.reactions.EX_co2_e: 1}
 
